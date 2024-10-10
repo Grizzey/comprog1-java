@@ -27,6 +27,8 @@
             height: 100vh;
             width: auto;
             margin: 0;
+            justify-content: space-between;
+            background-color: rgba(0, 0, 0, 0.548);;
         }
 
         #sidebar {
@@ -58,22 +60,26 @@
             justify-content: center;
         }
 
-        .login-creds > input {
+        .login-creds>input {
             width: 70%;
             height: 40px;
             padding-left: 10px;
             border-radius: 5px;
-            
+
             background-color: rgba(255, 88, 227, 0.233);
             border: 2px solid rgba(255, 0, 212, 0.486);
         }
 
-        .login-creds > input::placeholder {
+        .login-creds>input::placeholder {
             font-weight: bold;
             font-size: 10px;
         }
 
-        .login-creds > #password {
+        .login-creds>*:focus {
+            outline: 2px solid rgba(255, 0, 212, 0.712);
+        }
+
+        .login-creds>#password {
             margin-top: 15px;
         }
 
@@ -105,11 +111,25 @@
         }
 
         #content {
-            font-size: 20px;
-            margin-left: 30px;
-            margin-right: 20px;
+            font-size: 17px;
+            display: flex;
             overflow: hidden;
             color: white;
+            text-align: end;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        ul > li {
+            list-style-type: none;
+            padding-bottom: 20px;
+            padding-left: auto;
+            width: 100vh;
+            margin: 0;
+            align-self: flex-end;
+            padding-bottom: 25px;
+            padding-right: 50px;
         }
     </style>
 </head>
@@ -122,28 +142,29 @@
                 <img src="../images/riotlogo.png" id="riotlogo">
 
                 <span class="login-creds">
-                    <input type="text" id="username" placeholder="USERNAME">
-                    
-                    <input type="password" id="password" placeholder="PASSWORD">
+                    <input type="text" id="username" placeholder="USERNAME" autocomplete="off">
+
+                    <input type="password" id="password" placeholder="PASSWORD" autocomplete="off">
                 </span>
 
                 <span class="extra">
                     <input type="checkbox"><a>Stay signed in</a>
                 </span>
-                
+
                 <a id="next-button">></a>
 
                 <a id="fake-version">v.1.0.0</a>
                 <!-- <input type="button"> -->
             </div>
-            
+
             <div id="content">
                 <ul>
                     <li><b>Web Development:</b> Dynamic web apps using Spring, Hibernate, JSF.</li>
                     <li><b>Mobile Development:</b> Primarily for Android apps.</li>
                     <li><b>Enterprise Applications:</b> Large-scale applications with Java EE.</li>
                     <li><b>Desktop Applications:</b> Cross-platform apps using JavaFX and Swing.</li>
-                    <li><b>Scientific Applications:</b> Scientific computing with libraries like Apache Commons Math.</li>
+                    <li><b>Scientific Applications:</b> Scientific computing with libraries like Apache Commons Math.
+                    </li>
                     <li><b>Cloud-Based Applications:</b> Scalable services in the cloud.</li>
                     <li><b>Embedded Systems:</b> IoT devices with Java ME.</li>
                     <li><b>Game Development:</b> Mobile and browser-based games using LibGDX.</li>
@@ -153,7 +174,6 @@
                 </ul>
             </div>
         </span>
-        
     </div>
 </body>
 
